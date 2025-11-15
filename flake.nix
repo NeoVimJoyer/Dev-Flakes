@@ -11,7 +11,7 @@
     pkgs = nixpkgs.legacyPackages."${system}";
   in
   {
-    devshells."${system}".default = pkgs.myShell {
+    devShells."${system}".default = pkgs.myShell {
       packages = with pkgs; [
         gcc
       ];
