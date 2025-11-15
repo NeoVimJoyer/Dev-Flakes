@@ -14,6 +14,10 @@
     devShells."${system}".default = pkgs.mkShell {
       packages = with pkgs; [
         gcc
+        (pkgs.python3.withPackages(p: with p; [
+          # Any python libraries can be imported here
+          numpy
+        ]))
       ];
 
       shellHook = ''
