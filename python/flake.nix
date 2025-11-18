@@ -35,6 +35,7 @@
             ];
 
             shellHook = ''
+              echo "Welcome to this python development environment"
               zsh
             '';
           };
